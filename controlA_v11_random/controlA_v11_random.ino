@@ -119,6 +119,15 @@ void loop() {
   digitalWrite(list[randpin2], HIGH);
   digitalWrite(list[randpin4], HIGH);
   digitalWrite(list[randpin3], HIGH);
+
+
+  randpin1 = random(0,3);
+  randpin2 = random(4,7);
+  randpin3 = random(8,11);
+  randpin4 = random(12,15);
+  randpin5 = random(16,19);
+  
+  
   
   };
 
@@ -126,7 +135,7 @@ void loop() {
 
 
   //while(Serial3.available()>0) Serial3.read();
-  flush_receive();
+  //flush_receive();
   //lastDebounceTime = millis();
 
 
