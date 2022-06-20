@@ -11,33 +11,33 @@ uint8_t indexA = 0;
 // array to hold xbee frame 0x92 excluding header byte
 char inDataA[22];
 char inDataB[22];
-unsigned long AD1;
+unsigned long AD1; 
 unsigned long AD2;
-unsigned long noses[5];  // array to hold 13 values for nose information
-unsigned long store_noses[5];
-int calib_noses[5];
-int calib_nose_times[5];
-int nose_switches[5];
+unsigned long noses[4];  // array to hold 13 values for nose information
+unsigned long store_noses[4];
+int calib_noses[4];
+int calib_nose_times[4];
+int nose_switches[4];
 
 int switchOff1 = 0;
 int switchOff2 = 0;
 
 
-unsigned long mouths[5];  // array to hold 13 values for mouth information
-unsigned long store_mouths[5];
-//unsigned long calib_mouths[13];
-int calib_mouths[5];
-int calib_mouth_times[5];
-int mouth_switches[5];
+unsigned long mouths[4];  // array to hold 13 values for mouth information
+unsigned long store_mouths[4];
+//unsigned long calib_mouths[13]; 
+int calib_mouths[4];
+int calib_mouth_times[4];
+int mouth_switches[4];
 
 //int controlA[5][4] = { {24, 25, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, 18, 19}, {20, 21, 22, 23} };
-int controlA[5][4] = { {41, 42, 43, 44}, {45, 46, 47, 48}, {49, 50, 51, 52}, {53, 54, 55, 56}, {57, 58, 59, 60} };
+int controlA[4][4] = { {61,62,63,64},{65,66,67,68},{69,70,71,72},{73,74,75,76} };
 
 
-int scramble_check[5][4] = { {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0} };
+int scramble_check[4][4] = { {0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0} };
 
 //int list[] = { 24, 25, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22, 23 };
-int list[] = { 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60 };
+int list[] = { 61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 };
 const size_t n = sizeof(list) / sizeof(list[0]);
 
 
@@ -75,6 +75,13 @@ void loop() {
   //unsigned long delta = millis();
   // publish values after PUBLISH_DELTA ms have passed
 
+
+//   for (int i = 0; i < 16; i++)
+//  {
+//    MIDImessage(noteON, list[i], velocity);
+//    delay(1000);
+//    MIDImessage(noteOFF, list[i], velocity);
+//  }
   /*
        while(Serial2.available() > 0 )
     {
