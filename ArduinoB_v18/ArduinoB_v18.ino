@@ -1,6 +1,6 @@
-/* COORDINATOR B - SERIAL 3
-COORDINATOR D - SERIAL 2
-CHECK OF DAT CORRECT IS!!
+/* 
+COORDINATOR D - SERIAL 3
+COORDINATOR B - SERIAL 2
 */
 
 
@@ -168,7 +168,7 @@ void loop() {
               // reset for next command
               indexA = 0;
               // parse command
-              parseSerialB();
+              parseSerialD();
 
 
               while (Serial3.available() > 0) {
@@ -288,7 +288,7 @@ void loop() {
               // reset for next command
               indexB = 0;
               // parse command
-              parseSerialD();
+              parseSerialB();
 
 
               while (Serial2.available() > 0) {
