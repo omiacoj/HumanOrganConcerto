@@ -127,8 +127,6 @@ if ( store_noses[i] < maxi && store_noses[i] > mini )
   //mouth
       if ( calib_mouth_times[i] != 1 ) {
         
-        
-         
        if ( i < 3 ) {
      if (Serial3.available()) {
 
