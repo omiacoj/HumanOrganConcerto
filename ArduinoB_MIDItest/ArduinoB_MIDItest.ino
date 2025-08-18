@@ -1,4 +1,7 @@
-//#define DEBUG
+/* SWITCH OFF SERIAL PRINTS FOR CORRECT MIDI COMMUNICATION !!! 
+36 MIDI NOTES - from 21 to 56 
+we skip 51, because it's not working
+*/
 #define PUBLISH_DELTA 10
 //variables
 
@@ -91,13 +94,13 @@ void loop() {
   {
     
     if (i == 51) { // Check if 'x' is within the range to skip
-      Serial.println("skip 51");
+      //Serial.println("skip 51");
       continue;             // Skip the rest of the current iteration
     }
     
     MIDImessage(noteON, i, velocity);
     //MIDImessage(noteON, i, velocity);
-    Serial.println(i);
+    //Serial.println(i);
     //Serial.println(list[i]);
     delay(500);
     MIDImessage(noteOFF, i, velocity);
